@@ -52,7 +52,7 @@
     {% include "scripts.html" %}
 
     <script>
-        const BACKEND_ADDR_TIPS = "http://localhost:3000/tips";
+        const BACKEND_ADDR_TIPS = `${window.location.origin}/tips`;
 
         async function sendTransaction() {
             const sender = document.getElementById("sender").value;

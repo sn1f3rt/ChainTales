@@ -38,7 +38,7 @@
 
 <script>
     const provider = window.ethereum;
-    const BACKEND_ADDR_AUTH = "http://localhost:3000/auth";
+    const BACKEND_ADDR_AUTH = `${window.location.origin}/auth`;
 
     let accounts = null;
     let message = null;
@@ -71,7 +71,7 @@
     async function getSiweMessage(address) {
         const domain = window.location.host;
         const origin = window.location.origin;
-        const statement = "Sign in with Ethereum to IDenSafe.";
+        const statement = "Sign in with Ethereum to ChainTales.";
         const version = '1';
         const chain_id = '1';
 
@@ -97,7 +97,7 @@
 
         message = await getSiweMessage(
             signer,
-            "Sign in with Ethereum to BlogChain."
+            "Sign in with Ethereum to ChainTales."
         );
         signature = await provider
             .request({
