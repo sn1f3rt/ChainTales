@@ -1,5 +1,5 @@
 [project]
-name = "ChainTales"
+name = "chaintales"
 version = "0.0.0"
 description = "A proof-of-concept web3-based blogging platform with KYC support"
 license = "GPL-3.0"
@@ -7,7 +7,7 @@ authors = [
   { name="Sayan Bhattacharyya", email="sayan@sn1f3rt.dev" },
 ]
 readme = "README.md"
-requires-python = ">=3.12.7"
+requires-python = ">=3.12"
 dependencies = [
     "flask>=3.0.3",
     "flask-login>=0.6.3",

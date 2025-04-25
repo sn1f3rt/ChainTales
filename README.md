@@ -38,15 +38,15 @@ ChainTales aims to redefine decentralized content platforms by merging anonymity
 ## Prerequisites
 
 - Git
-- Python >=3.12.7
+- Python 3.12
+- Node.js 18 (& npm)
 - MariaDB/MySQL database
-- [Ganache](https://www.trufflesuite.com/ganache) or any other Ethereum testnet
 
 ## Installation
 
-1. Install [`uv`](https://docs.astral.sh/uv/) > https://docs.astral.sh/uv/getting-started/installation/\
+1. Install [`uv`](https://docs.astral.sh/uv/)
 
-2. Install [`make`](https://www.gnu.org/software/make/) > https://www.gnu.org/software/make/
+2. Install [`make`](https://www.gnu.org/software/make/)
 
 3. Clone the repository
 
@@ -66,12 +66,17 @@ ChainTales aims to redefine decentralized content platforms by merging anonymity
    make env
    ```
    
-6. Install dependencies
+6. Install Python dependencies
 
    ```shell
    make install
    ```
    
+7. Install [Ganache](https://archive.trufflesuite.com/ganache/) CLI
+
+   ```shell
+    npm i
+    ```
 
 ## Configuration
 
@@ -106,6 +111,14 @@ recaptcha:
 
 ### Development
 
+#### Run Ganache CLI
+
+```shell
+npm run ganache-dev
+```
+
+#### Run the web app
+
 ```shell
 make activate && make dev
 ```
@@ -113,6 +126,14 @@ make activate && make dev
 The app will be running at `http://localhost:3000`.
 
 ### Production
+
+#### Run Ganache CLI
+
+```shell
+npm run ganache-prod
+```
+
+#### Run the web app
 
 ```shell
 make activate && make prod
@@ -124,7 +145,7 @@ or if you want to enable SSL support
 make activate && make prod-ssl --certfile cert.pem --keyfile key.pem
 ```
 
-The app will be running at `http://localhost:3000`. The certificate and key files are required for SSL support.
+The app will be running at `http(s)://<YOUR-SERVER_IP>>:3000`. The certificate and key files are required for SSL support.
 
 ## License
 

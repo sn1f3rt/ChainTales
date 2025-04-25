@@ -37,8 +37,11 @@ cmd:
 	cd src/apps/backend \
 		&& PYTHONPATH=./ flask --app server:app $(filter-out $@,$(MAKECMDGOALS))
 
+reset-db:
+	cd scripts && ./reset_db.sh $(filter-out $@,$(MAKECMDGOALS))
+
 %:
 	@:
 
-.PHONY: env activate install install-dev export lint format dev prod prod-ssl cmd
-.DEFAULT_GOAL := debug
+.PHONY: env activate install install-dev export lint format dev prod prod-ssl cmd reset-db
+.DEFAULT_GOAL := dev

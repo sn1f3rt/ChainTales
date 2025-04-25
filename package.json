@@ -1,0 +1,28 @@
+{
+  "name": "chaintales",
+  "version": "0.0.0",
+  "description": "A proof-of-concept web3-based blogging platform with KYC support",
+  "scripts": {
+    "ganache-dev": "ganache --port 8545 --deterministic --accounts 3",
+    "ganache-prod": "ganache --host 0.0.0.0 --port 8545 --deterministic --accounts 3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sn1f3rt/ChainTales.git"
+  },
+  "author": {
+    "name": "Sayan Bhattacharyya",
+    "email": "sayan@sn1f3rt.dev"
+  },
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/sn1f3rt/ChainTales/issues"
+  },
+  "homepage": "https://github.com/sn1f3rt/ChainTales#readme",
+  "dependencies": {
+    "ganache": "^7.9.2"
+  },
+  "engines": {
+    "node": "18.x"
+  }
+}
