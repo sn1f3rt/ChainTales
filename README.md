@@ -151,7 +151,7 @@ or if you want to enable SSL support
 make prod-ssl cert.pem key.pem
 ```
 
-The app will be running at `http(s)://<YOUR-SERVER_IP>>:13139`. The certificate and key files are required for SSL support.
+The app will be running at `http(s)://<YOUR-SERVER_IP>>:13139`. The certificate and key files are required for SSL support, and should be placed in the `src/apps/backend` directory.
 
 ## License
 
