@@ -145,7 +145,7 @@ or if you want to enable SSL support
 make activate && make prod-ssl --certfile cert.pem --keyfile key.pem
 ```
 
-The app will be running at `http(s)://<YOUR-SERVER_IP>>:3000`. The certificate and key files are required for SSL support.
+The app will be running at `http(s)://<YOUR-SERVER_IP>>:13139`. The certificate and key files are required for SSL support.
 
 ## License
 

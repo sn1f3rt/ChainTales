@@ -4,7 +4,7 @@
   "description": "A proof-of-concept web3-based blogging platform with KYC support",
   "scripts": {
     "ganache-dev": "ganache --port 8545 --deterministic --accounts 3",
-    "ganache-prod": "ganache --host 0.0.0.0 --port 8545 --deterministic --accounts 3"
+    "ganache-prod": "ganache --host 0.0.0.0 --port 13138 --deterministic --accounts 3"
   },
   "repository": {
     "type": "git",

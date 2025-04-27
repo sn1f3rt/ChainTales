@@ -31,7 +31,7 @@ prod:
 
 prod-ssl:
 	cd src/apps/backend \
-		&& PYTHONPATH=./ gunicorn --bind 0.0.0.0:3000 server:app $(filter-out $@,$(MAKECMDGOALS))
+		&& PYTHONPATH=./ gunicorn --bind 0.0.0.0:13139 server:app $(filter-out $@,$(MAKECMDGOALS))
 
 cmd:
 	cd src/apps/backend \
