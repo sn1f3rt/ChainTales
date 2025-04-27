@@ -1,8 +1,8 @@
+CERTFILE ?= cert.pem
+KEYFILE ?= key.pem
+
 env:
 	uv venv
-
-activate:
-	source .venv/bin/activate
 
 install:
 	uv sync --no-dev --extra prod
@@ -27,11 +27,15 @@ dev:
 
 prod:
 	cd src/apps/backend \
-		&& PYTHONPATH=./ gunicorn --bind 0.0.0.0:3000 server:app
+		&& PYTHONPATH=./ gunicorn --bind 0.0.0.0:13139 server:app
 
 prod-ssl:
+	@if [ -z "$(word 1, $(filter-out $@,$(MAKECMDGOALS)))" ] || [ -z "$(word 2, $(filter-out $@,$(MAKECMDGOALS)))" ]; then \
+		echo "Usage: make prod-ssl cert.pem key.pem"; \
+		exit 1; \
+	fi
 	cd src/apps/backend \
-		&& PYTHONPATH=./ gunicorn --bind 0.0.0.0:13139 server:app $(filter-out $@,$(MAKECMDGOALS))
+		&& PYTHONPATH=./ gunicorn --bind 0.0.0.0:13139 server:app --certfile $(word 1, $(filter-out $@,$(MAKECMDGOALS))) --keyfile $(word 2, $(filter-out $@,$(MAKECMDGOALS)))
 
 cmd:
 	cd src/apps/backend \

@@ -66,13 +66,19 @@ ChainTales aims to redefine decentralized content platforms by merging anonymity
    make env
    ```
    
-6. Install Python dependencies
+6. Activate the virtual environment
+
+   ```shell
+   source .venv/bin/activate
+   ```
+   
+7. Install Python dependencies
 
    ```shell
    make install
    ```
    
-7. Install [Ganache](https://archive.trufflesuite.com/ganache/) CLI
+8. Install [Ganache](https://archive.trufflesuite.com/ganache/) CLI
 
    ```shell
     npm i
@@ -120,7 +126,7 @@ npm run ganache-dev
 #### Run the web app
 
 ```shell
-make activate && make dev
+make dev
 ```
 
 The app will be running at `http://localhost:3000`.
@@ -136,13 +142,13 @@ npm run ganache-prod
 #### Run the web app
 
 ```shell
-make activate && make prod
+make prod
 ```
 
 or if you want to enable SSL support
 
 ```shell
-make activate && make prod-ssl --certfile cert.pem --keyfile key.pem
+make prod-ssl cert.pem key.pem
 ```
 
 The app will be running at `http(s)://<YOUR-SERVER_IP>>:13139`. The certificate and key files are required for SSL support.
